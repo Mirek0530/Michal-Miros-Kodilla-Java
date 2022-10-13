@@ -19,7 +19,7 @@ public class CollectionTestSuite {
     }
 
     @DisplayName("When OddNumbersExterminator exterminate() method has given empty numbers list in argument" +
-                " then exterminate() should return list with one argument which is zero"
+                " then exterminate() should return empty list"
     )
 
     @Test
@@ -31,7 +31,7 @@ public class CollectionTestSuite {
         List<Integer> result = ode.exterminate(numbers);
         System.out.println("Testing testOddNumbersExterminatorEmptyList");
         //Then
-        Assertions.assertEquals(result.get(0), numbers.size());
+        Assertions.assertTrue(result.isEmpty());
     }
 
     @DisplayName("When OddNumbersExterminator exterminate() method has given list of numbers" +
