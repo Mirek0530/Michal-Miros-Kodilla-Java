@@ -3,6 +3,7 @@ package com.kodilla.testing.collection;
 import org.junit.jupiter.api.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class CollectionTestSuite {
@@ -41,13 +42,8 @@ public class CollectionTestSuite {
     void testOddNumberExterminatorNormalList() {
         //Given
         OddNumbersExterminator ode = new OddNumbersExterminator();
-        List<Integer> numbers = new ArrayList<>();
-        numbers.add(3);
-        numbers.add(18);
-        numbers.add(42);
-        numbers.add(18);
-        numbers.add(10);
-        numbers.add(4);
+        Integer[] num = new Integer[] {3, 18, 42, 10, 4, 13, 54, 14};
+        List<Integer> numbers = Arrays.asList(num);
         //When
         List<Integer> result = ode.exterminate(numbers);
         System.out.println("Testing testOddNumbersExterminatorNormalList");
