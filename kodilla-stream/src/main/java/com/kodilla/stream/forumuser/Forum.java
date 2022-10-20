@@ -12,7 +12,7 @@ public final class Forum {
         forumUserList.add(new ForumUser(342516, "RobCross1", 'M', LocalDate.of(1984,4,7), 2));
         forumUserList.add(new ForumUser(788345, "John_Cherry_03", 'M', LocalDate.of(1999,12,13), 0));
         forumUserList.add(new ForumUser(157658, "ala_has_cat", 'F', LocalDate.of(2001,1,26), 320));
-        forumUserList.add(new ForumUser(945623, "jonas56", 'M', LocalDate.of(1990,3,31), 59));
+        forumUserList.add(new ForumUser(945623, "jonas56", 'M', LocalDate.of(2002,10,20), 59));
         forumUserList.add(new ForumUser(638986, "polishUserka", 'F', LocalDate.of(1997,5,2), 129));
     }
 
