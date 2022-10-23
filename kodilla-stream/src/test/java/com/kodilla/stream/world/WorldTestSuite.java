@@ -1,6 +1,5 @@
 package com.kodilla.stream.world;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -19,40 +18,40 @@ public class WorldTestSuite {
         Continent antarctic = new Continent();
         Continent oceania = new Continent();
 
-        Country country1 = new Country(new BigDecimal("53412378"));
-        Country country2 = new Country(new BigDecimal("658567423"));
-        Country country3 = new Country(new BigDecimal("534112"));
-        Country country4 = new Country(new BigDecimal("1432561"));
-        Country country5 = new Country(new BigDecimal("325488456"));
-        Country country6 = new Country(new BigDecimal("13435161"));
-        Country country7 = new Country(new BigDecimal("3426771"));
-        Country country8 = new Country(new BigDecimal("324263735"));
-        Country country9 = new Country(new BigDecimal("435737537"));
-        Country country10 = new Country(new BigDecimal("63462342"));
-        Country country11 = new Country(new BigDecimal("42341237"));
-        Country country12 = new Country(new BigDecimal("123226537"));
-        Country country13 = new Country(new BigDecimal("123657553"));
-        Country country14 = new Country(new BigDecimal("123345"));
-        Country country15 = new Country(new BigDecimal("32424123"));
+        Country narnia = new Country(new BigDecimal("53412378"));
+        Country iceville = new Country(new BigDecimal("658567423"));
+        Country poland = new Country(new BigDecimal("534112"));
+        Country holland = new Country(new BigDecimal("1432561"));
+        Country greenpoint = new Country(new BigDecimal("325488456"));
+        Country fiji = new Country(new BigDecimal("13435161"));
+        Country aedirn = new Country(new BigDecimal("3426771"));
+        Country samoa = new Country(new BigDecimal("324263735"));
+        Country smallford = new Country(new BigDecimal("435737537"));
+        Country finland = new Country(new BigDecimal("63462342"));
+        Country oceanyard = new Country(new BigDecimal("42341237"));
+        Country norway = new Country(new BigDecimal("123226537"));
+        Country dimwater = new Country(new BigDecimal("123657553"));
+        Country snowborough = new Country(new BigDecimal("123345"));
+        Country sweden = new Country(new BigDecimal("32424123"));
 
-        antlantis.addCountry(country1);
-        antlantis.addCountry(country5);
-        antlantis.addCountry(country7);
-        antlantis.addCountry(country13);
+        antlantis.addCountry(narnia);
+        antlantis.addCountry(greenpoint);
+        antlantis.addCountry(aedirn);
+        antlantis.addCountry(dimwater);
 
-        europe.addCountry(country3);
-        europe.addCountry(country4);
-        europe.addCountry(country10);
-        europe.addCountry(country12);
-        europe.addCountry(country15);
+        europe.addCountry(poland);
+        europe.addCountry(holland);
+        europe.addCountry(finland);
+        europe.addCountry(norway);
+        europe.addCountry(sweden);
 
-        antarctic.addCountry(country2);
-        antarctic.addCountry(country14);
+        antarctic.addCountry(iceville);
+        antarctic.addCountry(snowborough);
 
-        oceania.addCountry(country6);
-        oceania.addCountry(country8);
-        oceania.addCountry(country9);
-        oceania.addCountry(country11);
+        oceania.addCountry(fiji);
+        oceania.addCountry(samoa);
+        oceania.addCountry(smallford);
+        oceania.addCountry(oceanyard);
 
         earth.addContinent(antlantis);
         earth.addContinent(europe);
