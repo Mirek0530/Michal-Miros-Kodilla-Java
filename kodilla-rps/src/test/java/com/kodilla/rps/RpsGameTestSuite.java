@@ -1,16 +1,9 @@
 package com.kodilla.rps;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
-@ExtendWith(MockitoExtension.class)
 public class RpsGameTestSuite {
 
     @Test
@@ -30,17 +23,13 @@ public class RpsGameTestSuite {
     void testIfCalculatedScoreDoesNotChangeAfterDraw() {
         //Given
         RpsGame rpsGame = new RpsGame();
-        int computerPoints = rpsGame.getDatabase().getRoundsWonByComputer();
-        int playerPoints = rpsGame.getDatabase().getRoundsWonByPlayer();
 
         //When
-        int player1Move = 1;
-        int player2Move = 1;
-        rpsGame.checkResult(player1Move, player2Move);
+        rpsGame.checkResult(1, 1); //both played ROCK
 
         //Then
-        assertEquals(0, computerPoints);
-        assertEquals(0, playerPoints);
+        assertEquals(0, rpsGame.getDatabase().getRoundsWonByComputer());
+        assertEquals(0, rpsGame.getDatabase().getRoundsWonByPlayer());
     }
 
     @Test
