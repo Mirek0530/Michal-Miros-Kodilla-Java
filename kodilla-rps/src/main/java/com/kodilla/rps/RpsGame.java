@@ -134,4 +134,8 @@ public class RpsGame {
     public RpsResultsDatabase getDatabase() {
         return database;
     }
+
+    public int getLastComputerMove() {
+        return lastComputerMove;
+    }
 }
