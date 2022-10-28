@@ -17,6 +17,8 @@ public class FirstChallenge {
             System.out.println(result);
         } catch (ArithmeticException ae) {
             System.out.println("You can't divide by ZERO! Exception: " + ae);
+        } finally {
+            System.out.println("That was the FirstChallenge");
         }
     }
 }
