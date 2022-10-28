@@ -85,11 +85,11 @@ public class RpsGameTestSuite {
     @DisplayName("Test computerMove method 1000 times - should always return number 1, 2 or 3")
     void testComputerMove() {
         //Given
+        RpsGame rpsGame = new RpsGame();
         List<Integer> computerMoves = new ArrayList<>();
 
         //When
         for (int i = 0; i < 1000; i++) {
-            RpsGame rpsGame = new RpsGame();
             rpsGame.computerMove();
             computerMoves.add(rpsGame.getLastComputerMove());
         }
