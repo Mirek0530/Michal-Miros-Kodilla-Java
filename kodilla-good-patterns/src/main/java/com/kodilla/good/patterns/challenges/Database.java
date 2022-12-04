@@ -11,7 +11,7 @@ public class Database implements ServiceDatabase {
     }
 
     @Override
-    public boolean isAvailable(Product product, int quantity) {
+    public boolean isProductAvailableInGivenQuantity(Product product, int quantity) {
         boolean available = false;
         if (products.containsKey(product)) {
             available = products.get(product) >= quantity;

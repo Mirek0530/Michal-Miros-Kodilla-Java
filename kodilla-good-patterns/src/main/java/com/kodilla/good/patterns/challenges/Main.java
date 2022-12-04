@@ -11,7 +11,7 @@ public class Main {
 
         database.addItem(chess, 10);
         database.addItem(sneakers, 56);
-        database.addItem(toothbrush,239);
+        database.addItem(toothbrush, 239);
 
         User matty67 = new User(56781, "matty67", "matty@yahoo.com");
         User rosie_0 = new User(90128, "rosie_0", "rosie_0@gmail.com");

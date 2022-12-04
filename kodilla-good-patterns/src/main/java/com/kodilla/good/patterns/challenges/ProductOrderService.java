@@ -10,7 +10,7 @@ public class ProductOrderService {
     }
 
     public OrderDto process(final OrderRequest orderRequest) {
-        boolean isAvailable = serviceDatabase.isAvailable(orderRequest.getProduct(), orderRequest.getQuantity());
+        boolean isAvailable = serviceDatabase.isProductAvailableInGivenQuantity(orderRequest.getProduct(), orderRequest.getQuantity());
 
         if (isAvailable) {
             informationService.inform(orderRequest.getUser());
