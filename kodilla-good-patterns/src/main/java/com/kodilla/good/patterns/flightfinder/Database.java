@@ -1,20 +1,10 @@
 package com.kodilla.good.patterns.flightfinder;
 
-import java.util.HashSet;
 import java.util.Set;
 
-public abstract class Database {
-    private Set<Flight> flights;
+public interface Database {
 
-    public Database() {
-        this.flights = new HashSet<>();
-    }
+    void addFlight(Flight flight);
 
-    public void addFlight(Flight flight) {
-        flights.add(flight);
-    }
-
-    public Set<Flight> getFlights() {
-        return flights;
-    }
+    Set<Flight> getFlights();
 }
