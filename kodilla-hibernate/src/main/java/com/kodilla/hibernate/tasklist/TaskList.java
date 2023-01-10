@@ -3,8 +3,10 @@ package com.kodilla.hibernate.tasklist;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "TASKLISTS")
 public class TaskList {
     private int id;
     private String listName;
