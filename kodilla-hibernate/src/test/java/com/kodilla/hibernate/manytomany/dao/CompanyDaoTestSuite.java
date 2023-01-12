@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @ExtendWith(SpringExtension.class)
@@ -16,6 +19,9 @@ public class CompanyDaoTestSuite {
 
     @Autowired
     private CompanyDao companyDao;
+
+    @Autowired
+    private EmployeeDao employeeDao;
 
     @Test
     void testSaveManyToMany() {
@@ -62,5 +68,50 @@ public class CompanyDaoTestSuite {
         } catch (Exception e) {
 
         }
+    }
+
+    @Test
+    void testEmployeeFindByGivenName() {
+        //Given
+        Employee johnSmith = new Employee("John", "Smith");
+        Employee stephanieClarkson = new Employee("Stephanie", "Clarkson");
+        Employee lindaKovalsky = new Employee("Linda", "Kovalsky");
+
+        //When
+        employeeDao.save(johnSmith);
+        employeeDao.save(stephanieClarkson);
+        employeeDao.save(lindaKovalsky);
+
+        List<Employee> result = employeeDao.findByGivenName("Kovalsky");
+
+        //Then
+        assertEquals(1, result.size());
+        assertEquals("Kovalsky", result.get(0).getLastname());
+
+        //CleanUp
+        employeeDao.deleteAll();
+    }
+
+    @Test
+    void testCompanyFindInCompanyNamesSubstring() {
+        //Given
+        Company dataTransfer = new Company("Data Transfer");
+        Company dataMasters = new Company("Data Masters");
+        Company softwareKings = new Company("Software Kings");
+        Company redFoxes = new Company("Red Foxes");
+
+        //When
+        companyDao.save(dataTransfer);
+        companyDao.save(dataMasters);
+        companyDao.save(softwareKings);
+        companyDao.save(redFoxes);
+
+        List<Company> result = companyDao.findInCompanyNamesSubstring("Dat");
+
+        //Then
+        assertEquals(2, result.size());
+
+        //CleanUp
+        companyDao.deleteAll();
     }
 }
