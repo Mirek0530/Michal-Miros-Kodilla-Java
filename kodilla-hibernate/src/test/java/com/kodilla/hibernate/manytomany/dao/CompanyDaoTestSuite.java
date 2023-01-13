@@ -93,7 +93,7 @@ public class CompanyDaoTestSuite {
     }
 
     @Test
-    void testCompanyFindInCompanyNamesSubstring() {
+    void testFindCompanyByNamePrefix() {
         //Given
         Company dataTransfer = new Company("Data Transfer");
         Company dataMasters = new Company("Data Masters");
@@ -106,7 +106,7 @@ public class CompanyDaoTestSuite {
         companyDao.save(softwareKings);
         companyDao.save(redFoxes);
 
-        List<Company> result = companyDao.findInCompanyNamesSubstring("Dat");
+        List<Company> result = companyDao.findCompanyByNamePrefix("Dat");
 
         //Then
         assertEquals(2, result.size());

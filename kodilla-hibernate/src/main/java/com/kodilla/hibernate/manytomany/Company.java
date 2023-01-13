@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @NamedNativeQuery(
-        name = "Company.findInCompanyNamesSubstring",
+        name = "Company.findCompanyByNamePrefix",
         query = "SELECT * FROM COMPANIES WHERE SUBSTRING(COMPANY_NAME, 1, 3) = :SUBSTRING",
         resultClass = Company.class
 )
