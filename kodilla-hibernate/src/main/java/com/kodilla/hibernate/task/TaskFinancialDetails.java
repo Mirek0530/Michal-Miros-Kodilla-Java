@@ -1,5 +1,6 @@
 package com.kodilla.hibernate.task;
 
+import com.kodilla.hibernate.cinema.Show;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
