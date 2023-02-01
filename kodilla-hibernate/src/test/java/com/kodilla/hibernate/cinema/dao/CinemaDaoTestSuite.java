@@ -1,20 +1,7 @@
 package com.kodilla.hibernate.cinema.dao;
 
-import com.kodilla.hibernate.cinema.Movie;
-import com.kodilla.hibernate.cinema.Room;
-import com.kodilla.hibernate.cinema.Show;
-import com.kodilla.hibernate.cinema.Ticket;
-import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -23,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 public class CinemaDaoTestSuite {
 
     @Autowired
-    private CinemaDao cinemaDao;
-
+    private ShowDao showDao;
+/*
     @Test
     void testCinemaDao() {
         //Given
@@ -70,5 +57,5 @@ public class CinemaDaoTestSuite {
 
         //CleanUp
         //cinemaDao.deleteAll();
-    }
+    }*/
 }

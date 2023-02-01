@@ -10,13 +10,13 @@ import java.math.BigDecimal;
 public class Ticket {
 
     private int id;
-    private int seat;
+    private Seat seat;
     private BigDecimal price;
 
     public Ticket() {
     }
 
-    public Ticket(int seat, BigDecimal price) {
+    public Ticket(Seat seat, BigDecimal price) {
         this.seat = seat;
         this.price = price;
     }
@@ -30,8 +30,9 @@ public class Ticket {
     }
 
     @NotNull
-    @Column(name = "SEAT")
-    public int getSeat() {
+    @OneToOne
+    @JoinColumn(name = "SEAT_ID")
+    public Seat getSeat() {
         return seat;
     }
 
@@ -45,7 +46,7 @@ public class Ticket {
         this.id = id;
     }
 
-    private void setSeat(int seat) {
+    private void setSeat(Seat seat) {
         this.seat = seat;
     }
 

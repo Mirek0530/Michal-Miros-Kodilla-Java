@@ -12,13 +12,15 @@ public class Room {
 
     private int id;
     private int seats;
-    private List<Show> shows = new ArrayList<>();
+    private List<Show> shows;
 
     public Room() {
     }
 
-    public Room(int seats) {
+    public Room(int id, int seats) {
+        this.id = id;
         this.seats = seats;
+        this.shows = new ArrayList<>();
     }
 
     @Id
