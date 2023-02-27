@@ -1,8 +1,7 @@
 package com.kodilla.hibernate.manytomany;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +9,10 @@ import java.util.List;
 @NamedQuery(
         name = "Employee.findByGivenName",
         query = "FROM Employee WHERE lastname = :NAME"
+)
+@NamedQuery(
+        name = "Employee.findEmployeeByGivenSubstring",
+        query = "FROM Employee WHERE firstname LIKE :ARG OR lastname LIKE :ARG"
 )
 @Entity
 @Table(name = "EMPLOYEES")
