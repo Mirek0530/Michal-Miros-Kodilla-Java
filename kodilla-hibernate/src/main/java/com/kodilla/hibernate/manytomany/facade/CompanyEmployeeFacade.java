@@ -25,22 +25,22 @@ public class CompanyEmployeeFacade {
     }
 
     public List<Company> findCompanyByGivenSubstring(String substring) throws QueryException {
-        LOGGER.info("Searching for company with given phrase " + substring);
+        LOGGER.info("Searching for company with given phrase: " + substring);
         List<Company> companies = companyDao.findCompanyByGivenSubstring("%" + substring + "%");
 
         if (companies.size() == 0) {
-            LOGGER.error(QueryException.COMPANY_NOT_FOUND);
+            LOGGER.error(String.format(QueryException.COMPANY_NOT_FOUND, substring));
             throw new QueryException(QueryException.COMPANY_NOT_FOUND);
         }
         return companies;
     }
 
     public List<Employee> findEmployeeByGivenSubstring(String substring) throws QueryException {
-        LOGGER.info("Searching for employee with given phrase " + substring);
+        LOGGER.info("Searching for employee with given phrase: " + substring);
         List<Employee> employees = employeeDao.findEmployeeByGivenSubstring("%" + substring + "%");
 
         if (employees.size() == 0) {
-            LOGGER.error(QueryException.EMPLOYEE_NOT_FOUND);
+            LOGGER.error(String.format(QueryException.EMPLOYEE_NOT_FOUND, substring));
             throw new QueryException(QueryException.EMPLOYEE_NOT_FOUND);
         }
         return employees;

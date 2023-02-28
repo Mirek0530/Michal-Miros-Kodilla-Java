@@ -59,7 +59,7 @@ public class TestCompanyEmployeeFacade {
         employeeDao.save(stephanieClarkson);
         employeeDao.save(lindaKovalsky);
 
-        List<Employee> result = facade.findEmployeeByGivenSubstring("anie");
+        List<Employee> result = facade.findEmployeeByGivenSubstring("ark");
 
         //Then
         assertEquals(1, result.size());
