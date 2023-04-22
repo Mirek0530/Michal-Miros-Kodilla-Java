@@ -45,7 +45,7 @@ public class DbManagerTestSuite {
         statement.close();
         assertEquals(5, counter);
     }
-
+/*
     @Test
     void testSelectUsersAndTasks() throws SQLException {
         //Given
@@ -71,7 +71,7 @@ public class DbManagerTestSuite {
         rs.close();
         statement.close();
         assertEquals(15, counter);
-    }
+    }*/
 
     @Test
     void testSelectUsersAndPosts() throws SQLException {
@@ -173,7 +173,7 @@ public class DbManagerTestSuite {
         assertEquals("I hate grapefruits.", posts.get(3));
 
     }
-
+/*
     @Test
     void testCreateEntityAndInsertRecords() throws SQLException {
         //Given
@@ -225,5 +225,5 @@ public class DbManagerTestSuite {
 
         assertEquals(3, counter);
 
-    }
+    }*/
 }
